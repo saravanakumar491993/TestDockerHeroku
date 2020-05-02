@@ -20,4 +20,4 @@ RUN dotnet publish "TestDocker.csproj" -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-CMD dotnet TestDocker.dll
+CMD dotnet testdocker.dll
